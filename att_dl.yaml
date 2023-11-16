@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  att_dl:
+    container_name: att_dl
+    image: att_dl:latest
+    restart: always
+    volumes:
+     - /volume1/paperless/consume/:/output/
+     - /volume1/docker/att_dl/config.py:/config.py
+     - /volume1/docker/att_dl/log/:/log/
